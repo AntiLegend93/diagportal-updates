@@ -1,3 +1,3 @@
 v1.3
 https://github.com/AntiLegend93/diagportal-updates/releases/download/v1.3/DiagPortal_Setup_1.3.exe
-678bfc28b2eb6c5623adc4cbd414cc584be21334ce47a65db276aa6102cb9a92
+9d4692a6e935cc931b8a2b55a36c6ea96a47e649abe770e81848d1f3cd24dc75
