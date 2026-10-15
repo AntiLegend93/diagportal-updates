@@ -1,4 +1,4 @@
-DiagPortal v1.4
+DiagPortal v1.5
 ===============
 
 A Windows diagnostics program. It runs 85 checks on your PC, turns the results into readable pages with
@@ -36,6 +36,17 @@ Cloudflare's speed test service (speed.cloudflare.com). Nothing else leaves the 
 check, which reads one small text file from GitHub.
 
 
+THE TOP BAR
+-----------
+  One row of buttons, grouped:
+    Home, Back  |  Quick Scan, Full Scan (Cancel Scan appears while a scan runs)  |  Results, Share, Tools menus
+    ... then Search, the Settings gear and Donate on the right.
+  Results menu ... System Summary, Previous Runs, Compare Runs
+  Share menu ..... Save as PDF, Copy Summary, Export to Share, Support Bundle, Open Reports Folder
+  Tools menu ..... Schedule Scans, Compare PCs, Check for Updates, Discord
+  Settings gear .. the Plain English switch
+
+
 THE WHOLE THING LIVES IN THIS ONE FOLDER
 ----------------------------------------
   BUILD.bat        double-click to build everything
@@ -59,7 +70,7 @@ HOW TO BUILD
   4. Open the release folder:
        release\DiagPortal\DiagPortal.exe   test it here
        release\DiagPortal_Share.zip        send this to a friend (no install needed)
-       release\DiagPortal_Setup_1.4.exe    only if Inno Setup is installed
+       release\DiagPortal_Setup_1.5.exe    only if Inno Setup is installed
 
 The build prints some PRI263 warnings about the .ps1 files. They are harmless.
 
@@ -107,13 +118,13 @@ RELEASING AN UPDATE (automatic install)
 The app checks https://raw.githubusercontent.com/AntiLegend93/diagportal-updates/refs/heads/main/latest.txt
 every time it starts. If the version on line 1 is newer than suite\version.txt, it offers to download and install.
 
-1. Change the version in suite\version.txt (for example v1.4) and in installer\DiagPortal.iss (#define AppVersion "1.4").
-2. Run BUILD.bat. You get release\DiagPortal_Setup_1.4.exe.
-3. On GitHub: repo diagportal-updates > Releases > Draft a new release. Tag v1.4. Attach the .exe. Publish.
+1. Change the version in suite\version.txt (for example v1.5) and in installer\DiagPortal.iss (#define AppVersion "1.5").
+2. Run BUILD.bat. You get release\DiagPortal_Setup_1.5.exe.
+3. On GitHub: repo diagportal-updates > Releases > Draft a new release. Tag v1.5. Attach the .exe. Publish.
 4. Double-click GET_HASH.bat. It works out the checksum and copies the three lines for latest.txt to the clipboard.
 5. Edit latest.txt on GitHub. Three lines, last one optional:
-       v1.4
-       https://github.com/AntiLegend93/diagportal-updates/releases/download/v1.4/DiagPortal_Setup_1.4.exe
+       v1.5
+       https://github.com/AntiLegend93/diagportal-updates/releases/download/v1.5/DiagPortal_Setup_1.5.exe
        <the 64-character checksum>
    Do this LAST, after the release is published. Saving it is what tells everyone's app about the update.
 
